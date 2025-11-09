@@ -16,13 +16,14 @@
         .gbp { color: #28a745; font-weight: bold; }
         .usd { color: #007bff; font-weight: bold; }
         .goal-price { font-size: 1.1em; font-weight: 900; color: #ff6600; }
+        .required-value { background-color: #e6f7ff; font-weight: bold; }
         .critical { color: red; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>META Automated Recovery Plan 🎯</h1>
+    <h1>META Complete Automated Strategy 🎯</h1>
     <p style="text-align: center; font-size: 1.1em; color: #555;">**Financial Goal:** Achieve £4,500 total profit. **Total Committed Capital:** £48,065</p>
 
     <h2>1. Automated Buy Orders (GTC Buy Stop-Limit) 🟢</h2>
@@ -134,7 +135,7 @@
     </table>
 
     <h2 style="color: #007bff;">3. Final Target Summary by Scenario</h2>
-    <p>This table shows the specific price needed to sell your *entire* portfolio to achieve your **£4,500 total profit** goal, depending on which traps successfully execute.</p>
+    <p>This table shows the specific price needed to sell your *entire* portfolio to achieve your **£4,500 total profit** goal.</p>
     <table>
         <thead>
             <tr class="target-summary">
@@ -142,6 +143,7 @@
                 <th>Traps Executed (Final Holding)</th>
                 <th>Total Shares Held (Approx.)</th>
                 <th>Total Cost (Approx. £)</th>
+                <th>Required Portfolio Value (GBP)</th>
                 <th>Required Sell Price (USD)</th>
             </tr>
         </thead>
@@ -151,6 +153,7 @@
                 <td>Anchor + Trap 1 + Trap 2</td>
                 <td>57</td>
                 <td>£27,015</td>
+                <td class="required-value">£31,515</td>
                 <td class="goal-price">$728.01</td>
             </tr>
             <tr>
@@ -158,6 +161,7 @@
                 <td>Anchor + Trap 3</td>
                 <td>36.82</td>
                 <td>£16,950</td>
+                <td class="required-value">£21,450</td>
                 <td class="goal-price">$647.24</td>
             </tr>
             <tr>
@@ -165,6 +169,7 @@
                 <td>Anchor + Trap 5 (T3 capital recycled)</td>
                 <td>54.09</td>
                 <td>£24,010</td>
+                <td class="required-value">£28,510</td>
                 <td class="goal-price">$582.49</td>
             </tr>
             <tr>
@@ -172,6 +177,7 @@
                 <td>Anchor + Trap 6 (T3 & T5 capital recycled)</td>
                 <td>92.79</td>
                 <td>£32,110</td>
+                <td class="required-value">£36,610</td>
                 <td class="goal-price">$518.42</td>
             </tr>
         </tbody>

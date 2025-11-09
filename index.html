@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>META Automated Recovery Plan</title>
+    <title>META Complete Automated Strategy</title>
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background-color: #f4f7f6; }
-        .container { max-width: 1000px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+        .container { max-width: 1100px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
         h1 { color: #007bff; text-align: center; border-bottom: 3px solid #007bff; padding-bottom: 10px; margin-bottom: 25px; }
         h2 { color: #333; margin-top: 30px; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
         table { width: 100%; border-collapse: collapse; margin-top: 15px; }
@@ -12,10 +12,11 @@
         th { background-color: #e9ecef; color: #333; font-weight: 600; }
         .buy-trap td:nth-child(1) { background-color: #d4edda; font-weight: bold; }
         .sell-trap td:nth-child(1) { background-color: #f8d7da; font-weight: bold; }
+        .target-summary th { background-color: #ffcc99; color: #333; }
         .gbp { color: #28a745; font-weight: bold; }
         .usd { color: #007bff; font-weight: bold; }
+        .goal-price { font-size: 1.1em; font-weight: 900; color: #ff6600; }
         .critical { color: red; font-weight: bold; }
-        .goal-price { font-size: 1.2em; font-weight: 900; color: #ff6600; }
     </style>
 </head>
 <body>
@@ -44,7 +45,7 @@
                 <td class="usd">$630.63</td>
                 <td class="usd">$631.00</td>
                 <td class="gbp">£8,065</td>
-                <td>~17 shares</td>
+                <td>~17</td>
             </tr>
             <tr class="buy-trap">
                 <td>Trap 2</td>
@@ -52,7 +53,7 @@
                 <td class="usd">$641.00</td>
                 <td class="usd">$641.50</td>
                 <td class="gbp">£8,000</td>
-                <td>~16 shares</td>
+                <td>~16</td>
             </tr>
             <tr class="buy-trap">
                 <td>Trap 3</td>
@@ -60,7 +61,7 @@
                 <td class="usd">$585.00</td>
                 <td class="usd">$585.50</td>
                 <td class="gbp">£6,000</td>
-                <td>~12.82 shares</td>
+                <td>~12.82</td>
             </tr>
             <tr class="buy-trap">
                 <td>Trap 5</td>
@@ -68,7 +69,7 @@
                 <td class="usd">$540.00</td>
                 <td class="usd">$540.50</td>
                 <td class="gbp">£13,000</td>
-                <td>~30.09 shares</td>
+                <td>~30.09</td>
             </tr>
             <tr class="buy-trap">
                 <td>Trap 6</td>
@@ -76,13 +77,13 @@
                 <td class="usd">$375.00</td>
                 <td class="usd">$375.50</td>
                 <td class="gbp">£21,000</td>
-                <td>~68.79 shares</td>
+                <td>~68.79</td>
             </tr>
         </tbody>
     </table>
 
     <h2>2. Mandatory Risk Protection (Sell Stop-Limit) 🚨</h2>
-    <p class="critical">**ACTION REQUIRED:** Place this Sell order IMMEDIATELY after the corresponding Buy order executes. The Stop/Limit is set equal for max protection.</p>
+    <p class="critical">**ACTION REQUIRED:** Place this Sell order IMMEDIATELY after the corresponding Buy order executes.</p>
     <table>
         <thead>
             <tr>
@@ -132,13 +133,49 @@
         </tbody>
     </table>
 
-    <h2 style="color: #007bff;">3. Final Target Summary</h2>
-    <p>This shows the final price needed to sell your *entire* position and achieve your £4,500 profit goal, depending on which traps execute.</p>
-    <ul>
-        <li>**Anchor Shares Cost:** ~£10,950 (Approx. 24 shares @ ~$681.25)</li>
-        <li>**Full Upside Goal Price (Trap 1 + Trap 2):** <span class="goal-price">$728.01 USD</span></li>
-        <li>**Deep Crash Goal Price (All Downside Traps Executed):** <span class="goal-price">$518.42 USD</span></li>
-    </ul>
+    <h2 style="color: #007bff;">3. Final Target Summary by Scenario</h2>
+    <p>This table shows the specific price needed to sell your *entire* portfolio to achieve your **£4,500 total profit** goal, depending on which traps successfully execute.</p>
+    <table>
+        <thead>
+            <tr class="target-summary">
+                <th>Scenario</th>
+                <th>Traps Executed (Final Holding)</th>
+                <th>Total Shares Held (Approx.)</th>
+                <th>Total Cost (Approx. £)</th>
+                <th>Required Sell Price (USD)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>**Full Upside**</td>
+                <td>Anchor + Trap 1 + Trap 2</td>
+                <td>57</td>
+                <td>£27,015</td>
+                <td class="goal-price">$728.01</td>
+            </tr>
+            <tr>
+                <td>**Only Trap 3**</td>
+                <td>Anchor + Trap 3</td>
+                <td>36.82</td>
+                <td>£16,950</td>
+                <td class="goal-price">$647.24</td>
+            </tr>
+            <tr>
+                <td>**Recycle to Trap 5**</td>
+                <td>Anchor + Trap 5 (T3 capital recycled)</td>
+                <td>54.09</td>
+                <td>£24,010</td>
+                <td class="goal-price">$582.49</td>
+            </tr>
+            <tr>
+                <td>**Recycle to Trap 6**</td>
+                <td>Anchor + Trap 6 (T3 & T5 capital recycled)</td>
+                <td>92.79</td>
+                <td>£32,110</td>
+                <td class="goal-price">$518.42</td>
+            </tr>
+        </tbody>
+    </table>
 
 </div>
 </body>

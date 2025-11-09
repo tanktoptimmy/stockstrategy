@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>META Automated Recovery Plan</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background-color: #f4f7f6; }
+        .container { max-width: 1000px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+        h1 { color: #007bff; text-align: center; border-bottom: 3px solid #007bff; padding-bottom: 10px; margin-bottom: 25px; }
+        h2 { color: #333; margin-top: 30px; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #e9ecef; color: #333; font-weight: 600; }
+        .buy-trap td:nth-child(1) { background-color: #d4edda; font-weight: bold; }
+        .sell-trap td:nth-child(1) { background-color: #f8d7da; font-weight: bold; }
+        .gbp { color: #28a745; font-weight: bold; }
+        .usd { color: #007bff; font-weight: bold; }
+        .critical { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>META Automated Recovery Plan 🎯</h1>
+    <p style="text-align: center; font-size: 1.1em; color: #555;">**Financial Goal:** Achieve £4,500 total profit. **Total Committed Capital:** £48,065</p>
+
+    <h2>1. Automated Buy Orders (GTC Buy Stop-Limit) 🟢</h2>
+    <p class="critical">**CRITICAL NOTE:** The Buy order executes when the **Stop Price (USD)** is hit. The price you get will be between the Stop and the Limit.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Trap</th>
+                <th>Focus</th>
+                <th>Stop Price (USD) [BUY TRIGGER]</th>
+                <th>Limit Price (USD) [MAX PRICE]</th>
+                <th>Capital to Commit (£)</th>
+                <th>Approx. Shares</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="buy-trap">
+                <td>Trap 1</td>
+                <td>Initial Breakout</td>
+                <td class="usd">$630.63</td>
+                <td class="usd">$631.00</td>
+                <td class="gbp">£8,065</td>
+                <td>~17 shares</td>
+            </tr>
+            <tr class="buy-trap">
+                <td>Trap 2</td>
+                <td>Rally Confirmation</td>
+                <td class="usd">$641.00</td>
+                <td class="usd">$641.50</td>
+                <td class="gbp">£8,000</td>
+                <td>~16 shares</td>
+            </tr>
+            <tr class="buy-trap">
+                <td>Trap 3</td>
+                <td>Immediate Support</td>
+                <td class="usd">$585.00</td>
+                <td class="usd">$585.50</td>
+                <td class="gbp">£6,000</td>
+                <td>~12.82 shares</td>
+            </tr>
+            <tr class="buy-trap">
+                <td>Trap 5</td>
+                <td>Medium Crash</td>
+                <td class="usd">$540.00</td>
+                <td class="usd">$540.50</td>
+                <td class="gbp">£13,000</td>
+                <td>~30.09 shares</td>
+            </tr>
+            <tr class="buy-trap">
+                <td>Trap 6</td>
+                <td>Deep Crash</td>
+                <td class="usd">$375.00</td>
+                <td class="usd">$375.50</td>
+                <td class="gbp">£21,000</td>
+                <td>~68.79 shares</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>2. Mandatory Risk Protection (Sell Stop-Limit) 🚨</h2>
+    <p class="critical">**ACTION REQUIRED:** Place this Sell order IMMEDIATELY after the corresponding Buy order executes. The Stop/Limit is set equal for max protection.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Trap Executed</th>
+                <th>Purchase Price (USD)</th>
+                <th>Sell Stop Price (USD) [SELL TRIGGER]</th>
+                <th>Sell Limit Price (USD) [MIN PRICE]</th>
+                <th>Max Loss (Approx.)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="sell-trap">
+                <td>Trap 1</td>
+                <td class="usd">$631.00</td>
+                <td class="usd">$621.17</td>
+                <td class="usd">$621.17</td>
+                <td>~£120</td>
+            </tr>
+            <tr class="sell-trap">
+                <td>Trap 2</td>
+                <td class="usd">$641.50</td>
+                <td class="usd">$631.79</td>
+                <td class="usd">$631.79</td>
+                <td>~£100</td>
+            </tr>
+            <tr class="sell-trap">
+                <td>Trap 3</td>
+                <td class="usd">$585.50</td>
+                <td class="usd">$579.15</td>
+                <td class="usd">$579.15</td>
+                <td>~£60</td>
+            </tr>
+            <tr class="sell-trap">
+                <td>Trap 5</td>
+                <td class="usd">$540.50</td>
+                <td class="usd">$534.60</td>
+                <td class="usd">$534.60</td>
+                <td>~£100</td>
+            </tr>
+            <tr class="sell-trap">
+                <td>Trap 6</td>
+                <td class="usd">$375.50</td>
+                <td class="usd">$371.25</td>
+                <td class="usd">$371.25</td>
+                <td>~£180</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 style="color: #007bff;">3. Final Target Summary</h2>
+    <ul>
+        <li>**Anchor Shares Cost:** ~£10,950 (Approx. 24 shares @ ~$681.25)</li>
+        <li>**Full Upside Goal Price (Trap 1 + Trap 2):** <span class="usd">**$728.01 USD**</span></li>
+        <li>**Deep Crash Goal Price (All Traps):** <span class="usd">**$421.73 USD**</span> (The easiest to reach)</li>
+    </ul>
+
+</div>
+</body>
+</html>

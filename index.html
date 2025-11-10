@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>META Complete Automated Strategy (CORRECTED)</title>
+    <title>META Complete Automated Strategy (FINAL)</title>
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background-color: #f4f7f6; }
         .container { max-width: 1100px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
@@ -18,17 +18,17 @@
         .goal-price { font-size: 1.1em; font-weight: 900; color: #ff6600; }
         .required-value { background-color: #e6f7ff; font-weight: bold; }
         .critical { color: red; font-weight: bold; }
-        .corrected { background-color: #ffcccc; }
+        .excluded { background-color: #f0f0f0; text-decoration: line-through; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>META Complete Automated Strategy 🎯</h1>
-    <p style="text-align: center; font-size: 1.1em; color: #555;">**Financial Goal:** Achieve £4,500 total profit. **Total Committed Capital:** £48,065</p>
+    <h1>META Automated Strategy: Final Version 🎯</h1>
+    <p style="text-align: center; font-size: 1.1em; color: #555;">**Financial Goal:** Achieve £4,500 total profit. **Total Committed Capital (Automated):** £27,065</p>
+    <p class="critical" style="text-align: center;">**NOTE:** The £21,000 intended for Trap 6 is retained as Cash Reserve, outside of the automated orders.</p>
 
     <h2>1. Automated Buy Orders (GTC Buy Stop-Limit) 🟢</h2>
-    <p class="critical">**CRITICAL NOTE:** The Buy order executes when the **Stop Price (USD)** is hit. The price you get will be between the Stop and the Limit.</p>
     <table>
         <thead>
             <tr>
@@ -42,7 +42,7 @@
         </thead>
         <tbody>
             <tr class="buy-trap">
-                <td>Trap 1</td>
+                <td>Trap 1 (EXECUTED)</td>
                 <td>Initial Breakout</td>
                 <td class="usd">$630.63</td>
                 <td class="usd">$631.00</td>
@@ -73,19 +73,21 @@
                 <td class="gbp">£13,000</td>
                 <td>~30.09</td>
             </tr>
-            <tr class="buy-trap">
-                <td>Trap 6</td>
+            <tr class="excluded">
+                <td>Trap 6 (MANUAL)</td>
                 <td>Deep Crash</td>
                 <td class="usd">$375.00</td>
                 <td class="usd">$375.50</td>
-                <td class="gbp">£21,000</td>
-                <td>~68.79</td>
+                <td class="gbp">£0 (Cash Reserve)</td>
+                <td>0</td>
             </tr>
         </tbody>
     </table>
 
+    ---
+
     <h2>2. Mandatory Risk Protection (Sell Stop-Limit) 🚨</h2>
-    <p class="critical">**ACTION REQUIRED:** Place this Sell order IMMEDIATELY after the corresponding Buy order executes.</p>
+    <p class="critical">**ACTION REQUIRED:** Ensure the Sell Stop-Limit for **Trap 1** is placed immediately.</p>
     <table>
         <thead>
             <tr>
@@ -98,45 +100,40 @@
         </thead>
         <tbody>
             <tr class="sell-trap">
-                <td>Trap 1</td>
+                <td>Trap 1 (Active)</td>
                 <td class="usd">$631.00</td>
                 <td class="usd">$621.17</td>
                 <td class="usd">$621.17</td>
                 <td>~£120</td>
             </tr>
             <tr class="sell-trap">
-                <td>Trap 2</td>
+                <td>Trap 2 (Pending)</td>
                 <td class="usd">$641.50</td>
                 <td class="usd">$631.79</td>
                 <td class="usd">$631.79</td>
                 <td>~£100</td>
             </tr>
             <tr class="sell-trap">
-                <td>Trap 3</td>
+                <td>Trap 3 (Pending)</td>
                 <td class="usd">$585.50</td>
                 <td class="usd">$579.15</td>
                 <td class="usd">$579.15</td>
                 <td>~£60</td>
             </tr>
             <tr class="sell-trap">
-                <td>Trap 5</td>
+                <td>Trap 5 (Pending)</td>
                 <td class="usd">$540.50</td>
                 <td class="usd">$534.60</td>
                 <td class="usd">$534.60</td>
                 <td>~£100</td>
             </tr>
-            <tr class="sell-trap">
-                <td>Trap 6</td>
-                <td class="usd">$375.50</td>
-                <td class="usd">$371.25</td>
-                <td class="usd">$371.25</td>
-                <td>~£180</td>
-            </tr>
         </tbody>
     </table>
 
+    ---
+
     <h2 style="color: #007bff;">3. Final Target Summary by Scenario</h2>
-    <p>This table shows the specific price needed to sell your *entire* portfolio to achieve your **£4,500 total profit** goal.</p>
+    <p>This table reflects the **highest probability** scenarios using your automated capital (excluding the £21k reserve).</p>
     <table>
         <thead>
             <tr class="target-summary">
@@ -150,36 +147,36 @@
         </thead>
         <tbody>
             <tr>
-                <td>**Full Upside**</td>
+                <td>**Full Upside (T1 & T2)**</td>
                 <td>Anchor + Trap 1 + Trap 2</td>
                 <td>57</td>
                 <td>£27,015</td>
                 <td class="required-value">£31,515</td>
                 <td class="goal-price">$728.01</td>
             </tr>
-            <tr class="corrected">
-                <td>**Only Trap 3**</td>
+            <tr>
+                <td>**Downside (Only T3)**</td>
                 <td>Anchor + Trap 3</td>
                 <td>36.82</td>
                 <td>£16,950</td>
                 <td class="required-value">£21,450</td>
                 <td class="goal-price">$766.82</td>
             </tr>
-            <tr class="corrected">
-                <td>**Recycle to Trap 5**</td>
+            <tr>
+                <td>**Deepest Automated Point (T5)**</td>
                 <td>Anchor + Trap 5 (T3 capital recycled)</td>
                 <td>54.09</td>
                 <td>£24,010</td>
                 <td class="required-value">£28,510</td>
                 <td class="goal-price">$694.51</td>
             </tr>
-            <tr>
-                <td>**Recycle to Trap 6**</td>
-                <td>Anchor + Trap 6 (T3 & T5 capital recycled)</td>
-                <td>92.79</td>
-                <td>£32,110</td>
-                <td class="required-value">£36,610</td>
-                <td class="goal-price">$518.42</td>
+            <tr class="critical">
+                <td>**MANUAL BOTTOM (T6)**</td>
+                <td>*If* £21k invested at $375.50</td>
+                <td>*~121 shares*</td>
+                <td>*£53,110*</td>
+                <td class="required-value">*£57,610*</td>
+                <td class="goal-price">$364.67 (Manual Target)</td>
             </tr>
         </tbody>
     </table>

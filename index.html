@@ -18,7 +18,7 @@
         .goal-price { font-size: 1.1em; font-weight: 900; color: #ff6600; }
         .required-value { background-color: #e6f7ff; font-weight: bold; }
         .critical { color: red; font-weight: bold; }
-        .manual-buy { background-color: #ffe0b2; }
+        .auto-buy { background-color: #c8e6c9; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -27,7 +27,8 @@
     <h1>META Automated Strategy: Final Version 🎯</h1>
     <p style="text-align: center; font-size: 1.1em; color: #555;">**Financial Goal:** Achieve £4,500 total profit. **Total Committed Capital (Automated):** £27,065</p>
 
-    <h2>1. Buy Orders (T2 is Manual Confirmation Buy) 🟢</h2>
+    <h2>1. Buy Orders (T2 is Automatic $\mathbf{\text{£16,000}}$ Buy) 🟢</h2>
+    <p class="critical">**ACTION:** The $\mathbf{\text{£16,000}}$ T2 order should be placed immediately as an automated Buy Stop-Limit.</p>
     <table>
         <thead>
             <tr>
@@ -48,11 +49,11 @@
                 <td class="gbp">£8,065</td>
                 <td>~17</td>
             </tr>
-            <tr class="manual-buy">
-                <td>**T2 (MANUAL)**</td>
+            <tr class="auto-buy">
+                <td>**T2 (AUTOMATIC)**</td>
                 <td>Bull Run Confirmation</td>
-                <td class="usd">**$641.00 (Manual Buy Trigger)**</td>
-                <td class="usd">N/A</td>
+                <td class="usd">**$641.00**</td>
+                <td class="usd">**$641.50**</td>
                 <td class="gbp">**£16,000**</td>
                 <td>**~32**</td>
             </tr>
@@ -78,7 +79,7 @@
     ---
 
     <h2>2. Risk Protection (Sell Stop-Limit Orders) 🚨</h2>
-    <p class="critical">**NOTE:** If T2 executes manually, you have the option to combine T1 & T2 into the new **Combined Upside** Stop-Loss below.</p>
+    <p class="critical">**CRITICAL ACTION:** If T2 executes, **cancel the T1 Stop-Loss** and place the new **Combined Upside** Stop-Loss for the entire 73-share position.</p>
     <table>
         <thead>
             <tr>
@@ -111,12 +112,12 @@
                 <td class="usd">$534.60</td>
                 <td>~£100</td>
             </tr>
-            <tr class="manual-buy" style="background-color: #b3e5fc;">
+            <tr class="auto-buy" style="background-color: #b3e5fc;">
                 <td>**Combined Upside**</td>
                 <td>**Protect All Upside Capital**</td>
                 <td class="usd">**$631.00**</td>
                 <td class="usd">**$630.00**</td>
-                <td>**~£300 (Total Portfolio Break-Even)**</td>
+                <td>**Net Break-Even/Small Gain**</td>
             </tr>
         </tbody>
     </table>
@@ -136,13 +137,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="manual-buy">
+            <tr class="auto-buy">
                 <td>**FINAL UPSIDE**</td>
-                <td>Anchor + Trap 1 + T2 (Manual $\mathbf{\text{£16k}}$)</td>
+                <td>Anchor + Trap 1 + T2 (Automatic $\mathbf{\text{£16k}}$)</td>
                 <td>**73**</td>
                 <td>**£35,015**</td>
                 <td class="required-value">**£39,515**</td>
-                <td class="goal-price">**$645.71**</td>
+                <td class="goal-price">**$711.23**</td>
             </tr>
             <tr>
                 <td>**Downside (Only T3)**</td>
